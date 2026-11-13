@@ -1,28 +1,25 @@
-# Unity 6 遊戲教學與 AI 協作範本
+# Unity 專案與 GitHub 版本控制期中考
 
-適用 Editor：**Unity 6000.3.17f1**。文件使用繁體中文，輸入統一使用 **Input System Package (New)**。
+## 1. 專案資訊
+* **專案名稱**：Midterm-Unity-Git
+* **Unity 版本**：6000.3.17f1
+* **使用的 Git 工具**：JetBrains Rider
 
-這是資料夾與協作文件骨架，尚不是能直接執行的完整 Unity 專案，未包含遊戲程式、場景與 Unity 產生的設定。請先依 [初始化指南](docs/02_初始化與InputSystem.md) 建立真正的專案，再合併本骨架。
+---
 
-## 閱讀順序
+## 2. Step-by-step 操作紀錄
+1. **準備 Unity 專案**：從課程平台下載 `Unity AI Project Template v0.2` 專案模板並解壓縮至全英文路徑（`D:\Midterm-Unity-Git`），檢查並確認專案資料夾內已包含 `Assets/`、`Packages/`、`ProjectSettings/` 以及 `.gitignore` 檔案。
+2. **連接 GitHub**：在 GitHub 建立一個設為 `Public`（公開）的空 Repository（`Midterm-Unity-Git`）。接著使用 JetBrains Rider 開啟本地專案資料夾，執行 `Create Git Repository` 建立本機版本庫，並透過 `Define remote` 綁定遠端 GitHub 網址與完成帳號授權。
+3. **完成 Commit**：開啟 Rider 的 Commit 面板，確認 `.gitignore` 已自動過濾掉 `Library/` 等龐大快取檔案後，勾選所有必要的專案檔案，填寫 `Initial commit: upload empty Unity project` 並完成提交。
+4. **將專案 Push 到 GitHub**：在 Rider 中執行 `Push`，將本機的 Commit 紀錄與專案檔案推送到遠端的 GitHub Repository。
+5. **確認檔案已成功上傳**：回到 GitHub Repository 網頁重新整理，確認畫面上已顯示 `Assets/`、`Packages/`、`ProjectSettings/`、`.gitignore` 與 `README.md`，並使用瀏覽器無痕視窗測試在未登入狀態下也能正常瀏覽。
 
-1. [資料夾與文件說明](docs/01_資料夾與文件說明.md)
-2. [初始化與 Input System](docs/02_初始化與InputSystem.md)
-3. [AI 協作流程](docs/03_AI協作流程.md)
-4. [教學路線與發布檢查](docs/04_教學與發布檢查.md)
+---
 
-AI 開始工作前須讀取根目錄 `AGENTS.md`；不會自動讀取的工具，請使用 `docs/05_AI啟動提示詞.md`。
-
-建議 Repo 名稱：`Unity6-AI-Teaching-Template`。建立 GitHub 公開 Repository 後，在 Settings 勾選 Template repository，讓同學以 Use this template 建立各自專案。正式開放前，先完成 Unity 初始化與 Editor 驗證。
-
-## 授權
-
-尚未選定授權。建議自有程式與文件採 MIT；公開前由維護者加入正式 LICENSE。第三方素材須各自確認可否再散布，不能直接套用專案授權。
-
-5. [Agent 相容性與解壓縮指南](docs/06_Agent相容性與解壓縮指南.md)
-
-已提供 Codex、Kiro、Antigravity 與 Claude Code 入口，以及 .gitignore。請完整解壓縮，包含以點開頭的檔案與資料夾。
-
-## 課程資產架構 v0.2
-
-3D 資產以 `Assets/_Project/Art/Models/<模型名稱>/` 為單位，FBX、專屬貼圖／材質直接同層存放；可共用的 Material 放在 `Art/Materials/`。2D Sprite 與逐格動畫依角色放在 `Art/Sprites/<角色名稱>/`。詳見 `docs/01_資料夾與文件說明.md`。本 ZIP 不包含實際 Cat 模型或 Roll a Ball 程式碼。
+## 3. 學習心得
+* **Commit（提交）**：
+  Commit 就像是替目前的專案進度拍一張「存檔快照」。每次修改完專案並執行 Commit，Git 就會在電腦本地端把這次改動了哪些檔案記錄下來，方便未來隨時查看修改歷史，或是在改壞專案時還原回之前的正常版本。
+* **Push（推送）**：
+  Push 就是把存在自己電腦本地端的 Commit 存檔紀錄，正式「上傳同步」到遠端伺服器（例如 GitHub）。透過 Push，不僅能幫專案做雲端備份，也能讓老師或團隊夥伴在網路上看到最新的專案進度。
+* **Pull（拉取）**：
+  Pull 則是把遠端伺服器（GitHub）上最新的檔案與修改紀錄「下載並合併」回自己的電腦。當在別台電腦繼續開發，或是與組員共同製作遊戲時，可以先用 Pull 取得大家最新的進度，避免檔案版本不一致而產生衝突。
